@@ -1,0 +1,50 @@
+<main>
+  <header>
+    <h1>Panel de Tareas</h1>
+    <p>Organiza tus pendientes con Angular</p>
+  </header>
+
+  <section class="agregar">
+    <input
+      type="text"
+      placeholder="Añade una nueva tarea..."
+      [(value)]="nuevaTarea"
+      (keydown.enter)="agregarTarea()"
+    />
+    <button (click)="agregarTarea()">Añadir</button>
+  </section>
+
+  <section class="filtros">
+    <button [class.activo]="filtro === 'todas'" (click)="filtro = 'todas'">
+      Todas ({{ tareas.length }})
+    </button>
+    <button [class.activo]="filtro === 'pendientes'" (click)="filtro = 'pendientes'">
+      Pendientes ({{ pendientes }})
+    </button>
+    <button [class.activo]="filtro === 'completadas'" (click)="filtro = 'completadas'">
+      Completadas ({{ completadas }})
+    </button>
+  </section>
+
+  <section class="lista">
+    @if (tareasFiltradas.length === 0) {
+      <div class="vacio">
+        <p>No hay tareas para mostrar</p>
+      </div>
+    } @else {
+      @for (tarea of tareasFiltradas; track tarea.id) {
+        <article class="tarea" [class.completada]="tarea.completada">
+          <div class="contenido">
+            <input type="checkbox" [checked]="tarea.completada" (change)="toggleTarea(tarea.id)" />
+            <span class="texto">{{ tarea.texto }}</span>
+          </div>
+          <button class="eliminar" (click)="eliminarTarea(tarea.id)">Eliminar</button>
+        </article>
+      }
+    }
+  </section>
+
+  <footer>
+    <p>Guardado automáticamente en localStorage</p>
+  </footer>
+</main>
