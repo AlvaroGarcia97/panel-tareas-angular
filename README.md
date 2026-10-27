@@ -1,10 +1,10 @@
 # Panel de Tareas con Angular
 
-Aplicacin web desarrollada con **Angular 19** para gestionar tareas pendientes. Permite aadir, marcar como completadas, filtrar y eliminar tareas con persistencia en `localStorage`.
+Aplicación web desarrollada con **Angular 19** para gestionar tareas pendientes. Permite aadir, marcar como completadas, filtrar y eliminar tareas con persistencia en `localStorage`.
 
 ## Funcionalidades
 
-- **Aadir tareas**: con botn o pulsando Enter.
+- **Aadir tareas**: con botón o pulsando Enter.
 - **Marcar como completadas/pendientes**: con el checkbox.
 - **Filtrar**: por *Todas*, *Pendientes* o *Completadas*.
 - **Eliminar tareas**: con un solo clic.
@@ -17,7 +17,7 @@ Aplicacin web desarrollada con **Angular 19** para gestionar tareas pendientes. 
 - [TypeScript](https://www.typescriptlang.org/) - Lenguaje
 - [CSS](https://developer.mozilla.org/es/docs/Web/CSS) - Estilos
 
-## Instalacin paso a paso (local)
+## Instalación paso a paso (local)
 
 ```bash
 # 1. Clonar el repositorio
@@ -27,14 +27,14 @@ cd panel-tareas-angular
 # 2. Instalar dependencias
 npm install
 
-# 3. Arrancar la aplicacin en modo desarrollo
+# 3. Arrancar la aplicación en modo desarrollo
 ng serve
 
 # 4. Abrir en el navegador
 # http://localhost:4200
 ```
 
-## Build para produccin
+## Build para producción
 
 ```bash
 ng build
@@ -47,7 +47,7 @@ Los archivos se generarn en `dist/`.
 ```
 src/
  app/
-    app.component.ts   # Lgica del componente
+    app.component.ts   # Lógica del componente
     app.component.html # Plantilla
     app.component.css  # Estilos
     app.config.ts      # Configuracin
@@ -57,6 +57,6 @@ src/
 
 ## Notas
 
-- Proyecto creado con **componentes standalone** (sin mdulos).
-- Sin backend: toda la informacin se guarda en el navegador.
-- Ideal para practicar Angular bsico.
+- Proyecto creado con **componentes standalone** (sin módulos).
+- Sin backend: toda la información se guarda en el navegador.
+- Ideal para practicar Angular básico.
